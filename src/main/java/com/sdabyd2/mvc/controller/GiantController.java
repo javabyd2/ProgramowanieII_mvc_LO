@@ -6,19 +6,21 @@ import com.sdabyd2.mvc.model.Health;
 import com.sdabyd2.mvc.model.Norishment;
 import com.sdabyd2.mvc.view.GiantView;
 
+import java.util.List;
+
 public class GiantController {
 
-    private GiantModel giantModel;
+    private List<GiantModel> giantModel;
     private GiantView giantView;
 
-    public GiantController(GiantModel giantModel,
+    public GiantController(List<GiantModel> giantModel,
                            GiantView giantView){
         this.giantModel = giantModel;
         this.giantView = giantView;
     }
 
-    public Health getHealth(){
-        return giantModel.getHealth();
+    public Health getHealth(int k){
+        return giantModel.get(k).getHealth();
     }
 
     public void setHealth(Health health){

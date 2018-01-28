@@ -7,6 +7,9 @@ import com.sdabyd2.mvc.model.Health;
 import com.sdabyd2.mvc.model.Norishment;
 import com.sdabyd2.mvc.view.GiantView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -16,10 +19,17 @@ public class Main {
                 Norishment.NOTHUNGRY,
                 Fatigue.NO
         );
+        GiantModel giant2 = new GiantModel(
+                Health.HEALTHY,
+                Norishment.NOTHUNGRY,
+                Fatigue.NO
+        );
+
+        List<GiantModel> giantModels = new ArrayList<>();
 
         GiantView view = new GiantView();
         GiantController controller = new GiantController(
-                giant1, view
+                giantModels, view
         );
 
         controller.updateView();
