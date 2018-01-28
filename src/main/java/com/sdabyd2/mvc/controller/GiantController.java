@@ -38,7 +38,11 @@ public class GiantController {
     }
 
     public void setNorishment(Norishment norishment){
-        this.giantModel.setNorishment();
+        this.giantModel.setNorishment(norishment);
+    }
+
+    public void updateView(){
+        this.giantView.displayGiant(giantModel);
     }
 
 }
