@@ -10,17 +10,17 @@ import java.util.List;
 
 public class GiantController {
 
-    private List<GiantModel> giantModel;
+    private GiantModel giantModel;
     private GiantView giantView;
 
-    public GiantController(List<GiantModel> giantModel,
+    public GiantController(GiantModel giantModel,
                            GiantView giantView){
         this.giantModel = giantModel;
         this.giantView = giantView;
     }
 
-    public Health getHealth(int k){
-        return giantModel.get(k).getHealth();
+    public Health getHealth(){
+        return giantModel.getHealth();
     }
 
     public void setHealth(Health health){
@@ -46,5 +46,6 @@ public class GiantController {
     public void updateView(){
         this.giantView.displayGiant(giantModel);
     }
+
 
 }

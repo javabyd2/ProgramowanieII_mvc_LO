@@ -25,11 +25,9 @@ public class Main {
                 Fatigue.NO
         );
 
-        List<GiantModel> giantModels = new ArrayList<>();
-
         GiantView view = new GiantView();
         GiantController controller = new GiantController(
-                giantModels, view
+                giant1, view
         );
 
         controller.updateView();
